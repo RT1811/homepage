@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: "Roboto", sans-serif;
@@ -90,7 +94,6 @@ h1, h2, h3 {
 
 .social-icons {
     display: flex;
-    justify-content: flex-end;
     gap: 0.75rem;
     margin-top: 1.5rem; 
 }
@@ -237,4 +240,111 @@ address {
     height: 100%;
     object-fit: cover;
     display: block;
+}
+
+.about-text .social-icons {
+    justify-content: flex-end;
+}
+
+.contact-text .social-icons {
+    justify-content: flex-start;
+}
+
+/*------------------ TABLET -----------------------  */
+
+@media (min-width: 601px) and (max-width: 900px) {
+    /* ABOUT / HERO */
+
+    .about-section {
+        padding: 5rem 3rem 4rem;
+    }
+
+    .about-section::before {
+        height: 75%;
+        clip-path: polygon(
+            0 0,
+            100% 0,
+            100% 65%,
+            0 100%
+        );
+    }
+
+    .about-card {
+        max-width: 700px;
+        display: block;
+        padding-top: 3rem;
+    }
+
+    .portrait {
+        width: 280px;
+        height: 320px;
+        float: left;
+
+        margin-right: 1.5rem;
+        margin-top: -3rem;
+        margin-bottom: 1rem;
+    }
+
+    .name {
+        font-size: 2.2rem;
+        white-space: nowrap;
+
+        /* lets the name extend beyond the portrait a little */
+        left: 1rem;
+    }
+
+    .about-text {
+        margin-left: 0;
+        min-height: 340px;
+
+        padding: 4rem 2rem 2rem;
+    }
+
+    .about-text h2 {
+        text-align: center;
+    }
+
+    .about-text .social-icons {
+        justify-content: flex-end;
+    }
+
+
+    /* MY WORK */
+
+    .work-section {
+        padding: 3rem;
+    }
+
+    .project-grid {
+        grid-template-columns:
+            repeat(auto-fit, minmax(250px, 1fr));
+
+        gap: 2rem;
+    }
+
+
+    /* CONTACT */
+
+    .contact-section {
+        grid-template-columns: 1.1fr 0.9fr;
+        margin-top: 2rem;
+    }
+
+    .contact-text {
+        padding: 2rem;
+    }
+
+    .contact-text .social-icons {
+        justify-content: flex-start;
+    }
+
+    .contact-photo {
+        min-height: 350px;
+    }
+
+    .contact-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 }
