@@ -10,6 +10,12 @@ h1, h2, h3 {
     font-family: "Playfair Display", serif;
 }
 
+a:focus-visible {
+    outline: 3px solid #111;
+    outline-offset: 4px;
+    border-radius: 3px;
+}
+
 .about-section {
     background-color: white;
     position: relative;
